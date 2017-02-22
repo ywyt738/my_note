@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'my_note'
+project = 'My NoteBook'
 copyright = '2017, HuangXiaojun'
 author = 'HuangXiaojun'
 

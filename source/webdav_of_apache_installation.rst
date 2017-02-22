@@ -4,8 +4,9 @@ WebDAV安装
 
 操作步骤
 =================
-1. 安装apache
 
+1. 安装apache
+*****************
 ::
 
   #安装apache
@@ -21,22 +22,20 @@ WebDAV安装
   $ service iptables stop
 
 2. 配置WebDAV模块
+*****************
 apache服务器已经集成了WebDAV模块，所以只需要启用该模块即可。
 
   2.1 编辑/etc/httpd/conf/httpd.conf
-
   ::
 
     $ vi /etc/httpd/conf/httpd.conf
 
   在文件的最后添加以下语句：
-
   ::
 
     Include conf/webdav.conf #指定webdav的配置文件路径
 
   2.2 新建webdav配置文件
-
   ::
 
     $ vi /etc/httpd/conf/webdav.conf
@@ -63,22 +62,21 @@ apache服务器已经集成了WebDAV模块，所以只需要启用该模块即�
     </IfModule>
 
   2.3. 创建访问目录
-
   ::
 
     $ mkdir -p /var/www/webdav
     $ chown apache:apache /var/www/webdav
 
   2.4. 添加用户
-
   ::
 
     $ htpasswd -c /etc/httpd/webdav.users.pwd test #根据提示输入密码
 
   2.5. 重启apache服务
-
   ::
 
     $ service httpd restart
 
 3. 测试
+*****************
+通过浏览器访问：访问本机 , 访问远程：http://hostip/webdav

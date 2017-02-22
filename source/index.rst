@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to my_note's documentation!
+My NoteBook
 ===================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-   
+   :caption: 目录:
+
    webdav_of_apache_installation
 
 
