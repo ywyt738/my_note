@@ -83,7 +83,10 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
+
+# Add any paths that contain custom themes here, relative to this directory.
+html_theme_path = ["_themes"]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -152,6 +155,3 @@ texinfo_documents = [
      author, 'my_note', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-
