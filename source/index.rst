@@ -7,11 +7,12 @@ My NoteBook
 ===================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 目录:
 
    webdav_of_apache_installation
-
+   cheatsheet
+   git_guide
 
 Indices and tables
 ==================
