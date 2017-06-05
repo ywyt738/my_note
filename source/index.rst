@@ -14,6 +14,7 @@ My NoteBook
    installation_openssh
    cheatsheet
    git_guide
+   django_tutorials/chapters.rst
 
 Indices and tables
 ==================
