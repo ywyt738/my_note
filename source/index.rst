@@ -17,6 +17,7 @@ My NoteBook
    Google_Authenticator
    django_tutorials/chapters.rst
 
+
 .. Indices and tables
  ==================
 
