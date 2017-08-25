@@ -17,9 +17,10 @@ My NoteBook
    Google_Authenticator
    django_tutorials/chapters.rst
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. Indices and tables
+ ==================
+
+ * :ref:`genindex`
+ * :ref:`modindex`
+ * :ref:`search`
