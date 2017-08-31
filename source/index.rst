@@ -15,6 +15,7 @@ My NoteBook
    cheatsheet
    git_guide
    Google_Authenticator
+   installation_freeradius
    django_tutorials/chapters.rst
 
 
