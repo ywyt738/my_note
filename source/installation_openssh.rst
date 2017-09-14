@@ -64,7 +64,16 @@ CentOS6.6安装Openssh 7.3p1
     make
     make install
 
-以上命令，将安装到 ``/opt/{bin,etc,lib,sbin}`` .但是配置文件在 ``/etc/ssh`` .
+以上命令，将安装到 ``/opt/{bin,etc,lib,sbin}`` .但是配置文件在 ``/opt/etc/ssh`` .
+
+**建议编译安装命令:**
+安装目录在 ``/usr/local``,配置文件在 ``/etc/ssh``.
+
+.. code-block:: shell
+
+  ./configure --with-pam --sysconfdir=/etc/ssh
+  make
+  make install
 
 4. 复制sshd文件到 ``/etc/init.d``
 
