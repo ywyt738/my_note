@@ -35,7 +35,7 @@ CentOS 7安装 freeraidus
 ``Connection info`` 下的为数据库信息，去掉 ``#``，修改信息即可指定数据库。
 
 #. 配置认证客户端
-在 ``/etc/raddb/clients.conf`` 最后增加一下内容：
+在 ``/etc/raddb/clients.conf`` 最后增加一下内容，允许任意ip客户端向radius认证：
 ::
 
   client users {
@@ -51,7 +51,7 @@ secret = testing123
 
 3. 防火墙开放端口
 ************************************************
-开放udp1812和1813端口::
+开放udp1812和1813端口(firewalld)::
 
   firewall-cmd --zone=public --add-port=1812/udp --permanent
   firewall-cmd --zone=public --add-port=1813/udp --permanent
@@ -106,3 +106,17 @@ radusergroup         用户和组关系表
 radacct              计费情况表
 radpostauth          认证后处理信息，可以包括认证请求成功和拒绝的记录。
 ==================== ====================
+
+7. 维护
+*********************
+freeradius启动命令
+-----------------------------
+
+::
+
+  radiusd   #启动radius
+  radiusd -X    #以debug模式启动
+
+freeradius日志
+-----------------------------
+默认日志目录：``/var/log/radius``
