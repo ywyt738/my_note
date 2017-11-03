@@ -1,2 +1,5 @@
 #构建文件
 build/
+
+#vscode files
+.vscode/
