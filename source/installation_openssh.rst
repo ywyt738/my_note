@@ -15,11 +15,18 @@ CentOS6.6安装Openssh 7.3p1
 
     .. code-block:: shell
 
+        yum install -y zlib-devel openssl-devel pam-devel
         yum install -y gcc* make
 
 
 安装步骤
 ===============
+0. 卸载现有openssh rpm包
+
+.. code-block:: shell
+
+  rpm -e `rpm -qa|grep openssh`
+
 1. 上传或者下载tar包至 ``tmp/`` 下
 
 2. 解压
@@ -90,29 +97,29 @@ CentOS6.6安装Openssh 7.3p1
 
 修改成自定义安装路径::
 
-    SSHD=/opt/sbin/sshd
+    SSHD=/usr/local/sbin/sshd
 
     if [ -x /sbin/restorecon ]; then
-            /sbin/restorecon /opt/etc/ssh_host_key.pub
-            /sbin/restorecon /opt/etc/ssh_host_rsa_key.pub
-            /sbin/restorecon /opt/etc/ssh_host_dsa_key.pub
-            /sbin/restorecon /opt/etc/ssh_host_ecdsa_key.pub
+            /sbin/restorecon /etc/ssh/ssh_host_key.pub
+            /sbin/restorecon /etc/ssh/ssh_host_rsa_key.pub
+            /sbin/restorecon /etc/ssh/ssh_host_dsa_key.pub
+            /sbin/restorecon /etc/ssh/ssh_host_ecdsa_key.pub
     fi
 
-注释这句 ``/sbin/restorecon /opt/etc/ssh_host_key.pub``
+注释这句 ``/sbin/restorecon /etc/ssh/ssh_host_key.pub``
 
 6. 添加快捷方式
 
 .. code-block:: shell
 
     cd /usr/bin
-    ln -s -T /opt/bin/scp scp
-    ln -s -T /opt/bin/sftp sftp
-    ln -s -T /opt/bin/ssh ssh
-    ln -s -T /opt/bin/ssh-add ssh-add
-    ln -s -T /opt/bin/ssh-agent ssh-agent
-    ln -s -T /opt/bin/ssh-keygen ssh-keygen
-    ln -s -T /opt/bin/ssh-keyscan ssh-keyscan
+    ln -s -T /usr/local/bin/scp scp
+    ln -s -T /usr/local/bin/sftp sftp
+    ln -s -T /usr/local/bin/ssh ssh
+    ln -s -T /usr/local/bin/ssh-add ssh-add
+    ln -s -T /usr/local/bin/ssh-agent ssh-agent
+    ln -s -T /usr/local/bin/ssh-keygen ssh-keygen
+    ln -s -T /usr/local/bin/ssh-keyscan ssh-keyscan
 
 7. 启动sshd服务
 
